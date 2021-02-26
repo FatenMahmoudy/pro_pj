@@ -7,25 +7,29 @@
 
 import XCTest
 
+@testable import ProfessionalsPagesJaunes
+
 class NetworkLayerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    let networking = Networking()
+    var searchResult: SearchResult?
+    var professionals: Professionals?
+    
+    func testDecodingResponse() throws {
+        let jsonObject = "{\"search_results\": {\"listings\": [{\"inscriptions\": [{\"address_city\": \"PARIS\",\"address_street\": \"81 r St Dominique\",\"address_zipcode\": \"75007\",\"contact_info\": [{\"contact_type\": \"TELEPHONE\",\"contact_value\": \"01 45 50 30 26\",\"no_direct_marketing\": true}]}],\"listing_id\": \"FCP014550302656308881H001C0001\",\"merchant_id\": \"56308881\",\"merchant_name\": \"Sothea Sar\",}]}}".data(using: .utf8)
+        
+        let response = Response(data: jsonObject!)
+        guard let decoded = response.decode(SearchResult.self) else {
+            return
+        }
+        XCTAssertTrue(false == decoded.search_results?.listings.isEmpty)
+        XCTAssertTrue(decoded.search_results?.listings[0].merchant_name == "Sothea Sar")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testPerformNetworkTask() throws {
+        networking.performNetworkTask(endpoint: AppAPI.professionals(whatValue: "medecin", whereValue: "paris"), type: SearchResult.self) { [weak self] (response) in
+            self?.searchResult = response
+            XCTAssertTrue(false == self?.searchResult?.search_results?.listings.isEmpty)
         }
     }
 

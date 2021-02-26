@@ -7,10 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE01684425E7F9B0002DA533 /* Infos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01684325E7F9B0002DA533 /* Infos.swift */; };
+		CE01684925E7F9D7002DA533 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01684825E7F9D7002DA533 /* Contacts.swift */; };
+		CE01684E25E920DB002DA533 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01684D25E920DB002DA533 /* Token.swift */; };
+		CE01686225E96207002DA533 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01686125E96207002DA533 /* UITestCase.swift */; };
+		CE01686A25E96222002DA533 /* StartupConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01686925E96222002DA533 /* StartupConfigurable.swift */; };
+		CE01686F25E9623A002DA533 /* AppStarting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01686E25E9623A002DA533 /* AppStarting.swift */; };
+		CE01687525E96505002DA533 /* RootViewStarting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01687425E96505002DA533 /* RootViewStarting.swift */; };
+		CE01687D25E9659C002DA533 /* HomeScreenVerifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01687C25E9659C002DA533 /* HomeScreenVerifying.swift */; };
+		CE01688225E965F7002DA533 /* HomeViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01688125E965F7002DA533 /* HomeViewControllerUITest.swift */; };
 		CE79EE7225E513D500E42BDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EE7125E513D500E42BDC /* AppDelegate.swift */; };
 		CE79EE7925E513D500E42BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE79EE7725E513D500E42BDC /* Main.storyboard */; };
 		CE79EE7B25E513D800E42BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE79EE7A25E513D800E42BDC /* Assets.xcassets */; };
 		CE79EE7E25E513D800E42BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE79EE7C25E513D800E42BDC /* LaunchScreen.storyboard */; };
+		CE79EEBC25E6B13600E42BDC /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EEBB25E6B13600E42BDC /* Response.swift */; };
+		CE79EEC425E6B18500E42BDC /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EEC325E6B18500E42BDC /* EndpointType.swift */; };
+		CE79EEC925E6B1A300E42BDC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EEC825E6B1A300E42BDC /* Networking.swift */; };
+		CE79EECE25E6B1D600E42BDC /* AppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EECD25E6B1D600E42BDC /* AppAPI.swift */; };
+		CE79EED325E6B44600E42BDC /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EED225E6B44600E42BDC /* NavigationViewController.swift */; };
+		CE79EED825E6C45600E42BDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EED725E6C45500E42BDC /* HomeViewController.swift */; };
+		CE79EEE325E6CD1F00E42BDC /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EEE225E6CD1F00E42BDC /* NetworkLayerTests.swift */; };
+		CE79EEE825E7C38D00E42BDC /* ProfessionalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EEE725E7C38D00E42BDC /* ProfessionalsViewController.swift */; };
+		CE79EEED25E7C4A100E42BDC /* ProfessionalsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EEEC25E7C4A100E42BDC /* ProfessionalsTableViewModel.swift */; };
+		CE79EEF225E7C4EA00E42BDC /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EEF125E7C4EA00E42BDC /* Professional.swift */; };
+		CE79EEF725E7C52B00E42BDC /* ProfessionalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE79EEF625E7C52B00E42BDC /* ProfessionalTableViewCell.xib */; };
+		CE79EEFC25E7C8D800E42BDC /* ProfessionalViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EEFB25E7C8D800E42BDC /* ProfessionalViewCellModel.swift */; };
+		CE79EF0125E7CAAA00E42BDC /* ProfessionalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EF0025E7CAAA00E42BDC /* ProfessionalTableViewCell.swift */; };
+		CE79EF0625E7D87000E42BDC /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EF0525E7D87000E42BDC /* SearchResult.swift */; };
+		CE79EF0B25E7D98C00E42BDC /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EF0A25E7D98C00E42BDC /* Professionals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE01684325E7F9B0002DA533 /* Infos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infos.swift; sourceTree = "<group>"; };
+		CE01684825E7F9D7002DA533 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		CE01684D25E920DB002DA533 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		CE01686125E96207002DA533 /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
+		CE01686925E96222002DA533 /* StartupConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupConfigurable.swift; sourceTree = "<group>"; };
+		CE01686E25E9623A002DA533 /* AppStarting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarting.swift; sourceTree = "<group>"; };
+		CE01687425E96505002DA533 /* RootViewStarting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewStarting.swift; sourceTree = "<group>"; };
+		CE01687C25E9659C002DA533 /* HomeScreenVerifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVerifying.swift; sourceTree = "<group>"; };
+		CE01688125E965F7002DA533 /* HomeViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerUITest.swift; sourceTree = "<group>"; };
 		CE79EE6E25E513D500E42BDC /* ProfessionalsPagesJaunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfessionalsPagesJaunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE79EE7125E513D500E42BDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE79EE7825E513D500E42BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +74,21 @@
 		CE79EE8A25E513D800E42BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE79EE8F25E513D800E42BDC /* ProfessionalsPagesJaunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfessionalsPagesJaunesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE79EE9525E513D800E42BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE79EEBB25E6B13600E42BDC /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		CE79EEC325E6B18500E42BDC /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		CE79EEC825E6B1A300E42BDC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		CE79EECD25E6B1D600E42BDC /* AppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPI.swift; sourceTree = "<group>"; };
+		CE79EED225E6B44600E42BDC /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		CE79EED725E6C45500E42BDC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CE79EEE225E6CD1F00E42BDC /* NetworkLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTests.swift; sourceTree = "<group>"; };
+		CE79EEE725E7C38D00E42BDC /* ProfessionalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalsViewController.swift; sourceTree = "<group>"; };
+		CE79EEEC25E7C4A100E42BDC /* ProfessionalsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalsTableViewModel.swift; sourceTree = "<group>"; };
+		CE79EEF125E7C4EA00E42BDC /* Professional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
+		CE79EEF625E7C52B00E42BDC /* ProfessionalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfessionalTableViewCell.xib; sourceTree = "<group>"; };
+		CE79EEFB25E7C8D800E42BDC /* ProfessionalViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalViewCellModel.swift; sourceTree = "<group>"; };
+		CE79EF0025E7CAAA00E42BDC /* ProfessionalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalTableViewCell.swift; sourceTree = "<group>"; };
+		CE79EF0525E7D87000E42BDC /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		CE79EF0A25E7D98C00E42BDC /* Professionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Professionals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +116,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE01685E25E961BA002DA533 /* Interacting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interacting;
+			sourceTree = "<group>";
+		};
+		CE01685F25E961C8002DA533 /* Verifying */ = {
+			isa = PBXGroup;
+			children = (
+				CE01687C25E9659C002DA533 /* HomeScreenVerifying.swift */,
+			);
+			path = Verifying;
+			sourceTree = "<group>";
+		};
+		CE01686025E961CB002DA533 /* Starting */ = {
+			isa = PBXGroup;
+			children = (
+				CE01686925E96222002DA533 /* StartupConfigurable.swift */,
+				CE01686E25E9623A002DA533 /* AppStarting.swift */,
+				CE01687425E96505002DA533 /* RootViewStarting.swift */,
+			);
+			path = Starting;
+			sourceTree = "<group>";
+		};
 		CE79EE6525E513D500E42BDC = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				CE79EE8A25E513D800E42BDC /* Info.plist */,
+				CE79EEE225E6CD1F00E42BDC /* NetworkLayerTests.swift */,
 			);
 			path = ProfessionalsPagesJaunesTests;
 			sourceTree = "<group>";
@@ -116,7 +190,12 @@
 		CE79EE9225E513D800E42BDC /* ProfessionalsPagesJaunesUITests */ = {
 			isa = PBXGroup;
 			children = (
+				CE01686025E961CB002DA533 /* Starting */,
+				CE01685F25E961C8002DA533 /* Verifying */,
+				CE01685E25E961BA002DA533 /* Interacting */,
 				CE79EE9525E513D800E42BDC /* Info.plist */,
+				CE01686125E96207002DA533 /* UITestCase.swift */,
+				CE01688125E965F7002DA533 /* HomeViewControllerUITest.swift */,
 			);
 			path = ProfessionalsPagesJaunesUITests;
 			sourceTree = "<group>";
@@ -124,6 +203,9 @@
 		CE79EEB625E6B05A00E42BDC /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CE79EEC325E6B18500E42BDC /* EndpointType.swift */,
+				CE79EEC825E6B1A300E42BDC /* Networking.swift */,
+				CE79EECD25E6B1D600E42BDC /* AppAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -131,6 +213,9 @@
 		CE79EEB725E6B06700E42BDC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE79EED225E6B44600E42BDC /* NavigationViewController.swift */,
+				CE79EED725E6C45500E42BDC /* HomeViewController.swift */,
+				CE79EEE725E7C38D00E42BDC /* ProfessionalsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +223,8 @@
 		CE79EEB825E6B07100E42BDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE79EEF625E7C52B00E42BDC /* ProfessionalTableViewCell.xib */,
+				CE79EF0025E7CAAA00E42BDC /* ProfessionalTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +232,8 @@
 		CE79EEB925E6B07800E42BDC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CE79EEEC25E7C4A100E42BDC /* ProfessionalsTableViewModel.swift */,
+				CE79EEFB25E7C8D800E42BDC /* ProfessionalViewCellModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -152,6 +241,13 @@
 		CE79EEBA25E6B08100E42BDC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE79EEBB25E6B13600E42BDC /* Response.swift */,
+				CE79EEF125E7C4EA00E42BDC /* Professional.swift */,
+				CE79EF0525E7D87000E42BDC /* SearchResult.swift */,
+				CE79EF0A25E7D98C00E42BDC /* Professionals.swift */,
+				CE01684325E7F9B0002DA533 /* Infos.swift */,
+				CE01684825E7F9D7002DA533 /* Contacts.swift */,
+				CE01684D25E920DB002DA533 /* Token.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,10 +322,12 @@
 					};
 					CE79EE8325E513D800E42BDC = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 						TestTargetID = CE79EE6D25E513D500E42BDC;
 					};
 					CE79EE8E25E513D800E42BDC = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 						TestTargetID = CE79EE6D25E513D500E42BDC;
 					};
 				};
@@ -261,6 +359,7 @@
 			files = (
 				CE79EE7E25E513D800E42BDC /* LaunchScreen.storyboard in Resources */,
 				CE79EE7B25E513D800E42BDC /* Assets.xcassets in Resources */,
+				CE79EEF725E7C52B00E42BDC /* ProfessionalTableViewCell.xib in Resources */,
 				CE79EE7925E513D500E42BDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +385,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE79EEED25E7C4A100E42BDC /* ProfessionalsTableViewModel.swift in Sources */,
+				CE79EEF225E7C4EA00E42BDC /* Professional.swift in Sources */,
+				CE79EED325E6B44600E42BDC /* NavigationViewController.swift in Sources */,
+				CE79EECE25E6B1D600E42BDC /* AppAPI.swift in Sources */,
+				CE79EF0B25E7D98C00E42BDC /* Professionals.swift in Sources */,
+				CE01684425E7F9B0002DA533 /* Infos.swift in Sources */,
+				CE79EEBC25E6B13600E42BDC /* Response.swift in Sources */,
+				CE79EF0125E7CAAA00E42BDC /* ProfessionalTableViewCell.swift in Sources */,
+				CE01684E25E920DB002DA533 /* Token.swift in Sources */,
 				CE79EE7225E513D500E42BDC /* AppDelegate.swift in Sources */,
+				CE01684925E7F9D7002DA533 /* Contacts.swift in Sources */,
+				CE79EF0625E7D87000E42BDC /* SearchResult.swift in Sources */,
+				CE79EEC425E6B18500E42BDC /* EndpointType.swift in Sources */,
+				CE79EEE825E7C38D00E42BDC /* ProfessionalsViewController.swift in Sources */,
+				CE79EED825E6C45600E42BDC /* HomeViewController.swift in Sources */,
+				CE79EEC925E6B1A300E42BDC /* Networking.swift in Sources */,
+				CE79EEFC25E7C8D800E42BDC /* ProfessionalViewCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE79EEE325E6CD1F00E42BDC /* NetworkLayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +417,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE01687D25E9659C002DA533 /* HomeScreenVerifying.swift in Sources */,
+				CE01687525E96505002DA533 /* RootViewStarting.swift in Sources */,
+				CE01686A25E96222002DA533 /* StartupConfigurable.swift in Sources */,
+				CE01688225E965F7002DA533 /* HomeViewControllerUITest.swift in Sources */,
+				CE01686225E96207002DA533 /* UITestCase.swift in Sources */,
+				CE01686F25E9623A002DA533 /* AppStarting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,10 +620,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPH5Z38NV2;
 				INFOPLIST_FILE = ProfessionalsPagesJaunesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,6 +632,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fm.ProfessionalsPagesJaunes.ProfessionalsPagesJaunesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfessionalsPagesJaunes.app/ProfessionalsPagesJaunes";
@@ -520,10 +644,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPH5Z38NV2;
 				INFOPLIST_FILE = ProfessionalsPagesJaunesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPH5Z38NV2;
 				INFOPLIST_FILE = ProfessionalsPagesJaunesUITests/Info.plist;
@@ -551,6 +677,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fm.ProfessionalsPagesJaunes.ProfessionalsPagesJaunesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ProfessionalsPagesJaunes;
@@ -561,6 +688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPH5Z38NV2;
 				INFOPLIST_FILE = ProfessionalsPagesJaunesUITests/Info.plist;
