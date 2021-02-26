@@ -19,6 +19,11 @@
 		CE01688A25E96BDF002DA533 /* ProfessionalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01688925E96BDF002DA533 /* ProfessionalDetailsViewController.swift */; };
 		CE01688F25E99226002DA533 /* ProfessionalDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01688E25E99226002DA533 /* ProfessionalDetailsViewModel.swift */; };
 		CE01689425E9A7D9002DA533 /* ProfessionalsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01689325E9A7D9002DA533 /* ProfessionalsViewControllerTests.swift */; };
+		CE01689925E9A87B002DA533 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01689825E9A87B002DA533 /* FavoritesViewController.swift */; };
+		CE01689F25E9AB58002DA533 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01689D25E9AB58002DA533 /* FavoriteTableViewCell.swift */; };
+		CE0168A025E9AB58002DA533 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE01689E25E9AB58002DA533 /* FavoriteTableViewCell.xib */; };
+		CE0168A525E9AEB3002DA533 /* FavoriteViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0168A425E9AEB3002DA533 /* FavoriteViewCellModel.swift */; };
+		CE0168AA25E9AF3D002DA533 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0168A925E9AF3D002DA533 /* FavoritesViewModel.swift */; };
 		CE79EE7225E513D500E42BDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79EE7125E513D500E42BDC /* AppDelegate.swift */; };
 		CE79EE7925E513D500E42BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE79EE7725E513D500E42BDC /* Main.storyboard */; };
 		CE79EE7B25E513D800E42BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE79EE7A25E513D800E42BDC /* Assets.xcassets */; };
@@ -70,6 +75,11 @@
 		CE01688925E96BDF002DA533 /* ProfessionalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalDetailsViewController.swift; sourceTree = "<group>"; };
 		CE01688E25E99226002DA533 /* ProfessionalDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalDetailsViewModel.swift; sourceTree = "<group>"; };
 		CE01689325E9A7D9002DA533 /* ProfessionalsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalsViewControllerTests.swift; sourceTree = "<group>"; };
+		CE01689825E9A87B002DA533 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		CE01689D25E9AB58002DA533 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		CE01689E25E9AB58002DA533 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		CE0168A425E9AEB3002DA533 /* FavoriteViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewCellModel.swift; sourceTree = "<group>"; };
+		CE0168A925E9AF3D002DA533 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		CE79EE6E25E513D500E42BDC /* ProfessionalsPagesJaunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfessionalsPagesJaunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE79EE7125E513D500E42BDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE79EE7825E513D500E42BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -224,6 +234,7 @@
 				CE79EED725E6C45500E42BDC /* HomeViewController.swift */,
 				CE79EEE725E7C38D00E42BDC /* ProfessionalsViewController.swift */,
 				CE01688925E96BDF002DA533 /* ProfessionalDetailsViewController.swift */,
+				CE01689825E9A87B002DA533 /* FavoritesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +244,8 @@
 			children = (
 				CE79EEF625E7C52B00E42BDC /* ProfessionalTableViewCell.xib */,
 				CE79EF0025E7CAAA00E42BDC /* ProfessionalTableViewCell.swift */,
+				CE01689D25E9AB58002DA533 /* FavoriteTableViewCell.swift */,
+				CE01689E25E9AB58002DA533 /* FavoriteTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +256,8 @@
 				CE79EEEC25E7C4A100E42BDC /* ProfessionalsTableViewModel.swift */,
 				CE79EEFB25E7C8D800E42BDC /* ProfessionalViewCellModel.swift */,
 				CE01688E25E99226002DA533 /* ProfessionalDetailsViewModel.swift */,
+				CE0168A425E9AEB3002DA533 /* FavoriteViewCellModel.swift */,
+				CE0168A925E9AF3D002DA533 /* FavoritesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -368,6 +383,7 @@
 			files = (
 				CE79EE7E25E513D800E42BDC /* LaunchScreen.storyboard in Resources */,
 				CE79EE7B25E513D800E42BDC /* Assets.xcassets in Resources */,
+				CE0168A025E9AB58002DA533 /* FavoriteTableViewCell.xib in Resources */,
 				CE79EEF725E7C52B00E42BDC /* ProfessionalTableViewCell.xib in Resources */,
 				CE79EE7925E513D500E42BDC /* Main.storyboard in Resources */,
 			);
@@ -408,10 +424,14 @@
 				CE01684925E7F9D7002DA533 /* Contacts.swift in Sources */,
 				CE79EF0625E7D87000E42BDC /* SearchResult.swift in Sources */,
 				CE01688F25E99226002DA533 /* ProfessionalDetailsViewModel.swift in Sources */,
+				CE0168A525E9AEB3002DA533 /* FavoriteViewCellModel.swift in Sources */,
 				CE79EEC425E6B18500E42BDC /* EndpointType.swift in Sources */,
 				CE79EEE825E7C38D00E42BDC /* ProfessionalsViewController.swift in Sources */,
 				CE79EED825E6C45600E42BDC /* HomeViewController.swift in Sources */,
 				CE79EEC925E6B1A300E42BDC /* Networking.swift in Sources */,
+				CE01689925E9A87B002DA533 /* FavoritesViewController.swift in Sources */,
+				CE0168AA25E9AF3D002DA533 /* FavoritesViewModel.swift in Sources */,
+				CE01689F25E9AB58002DA533 /* FavoriteTableViewCell.swift in Sources */,
 				CE79EEFC25E7C8D800E42BDC /* ProfessionalViewCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

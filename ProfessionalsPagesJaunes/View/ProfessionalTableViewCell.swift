@@ -19,7 +19,7 @@ class ProfessionalTableViewCell: UITableViewCell {
             nameLabel.text = viewModel.name
             addressLabel.text = viewModel.address
             
-            logoImageView.layer.borderWidth = 1.0
+            logoImageView.layer.borderWidth = 0
             logoImageView.layer.masksToBounds = false
             logoImageView.layer.cornerRadius = logoImageView.frame.size.height/2
             logoImageView.clipsToBounds = true

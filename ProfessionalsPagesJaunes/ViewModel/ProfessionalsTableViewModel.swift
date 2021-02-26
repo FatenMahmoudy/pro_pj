@@ -13,12 +13,6 @@ class ProfessionalsTableViewModel {
     private var searchResult : SearchResult?
     private var profossionals : Professionals?
     
-    public func getAccessToken(completion: (() -> Void)?) {
-        networking.getAccessToken(endpoint: AppAPI.accessToken, type: Token.self) { (response) in
-            completion?()
-        }
-    }
-    
     public func getProfessionals(whatValue: String, whereValue: String,completion: (() -> Void)?) {
         networking.performNetworkTask(endpoint: AppAPI.professionals(whatValue: whatValue, whereValue: whereValue),
                                       type: SearchResult.self) { [weak self] (response) in

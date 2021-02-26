@@ -51,9 +51,7 @@ struct Networking {
                                         type: T.Type,
                                         completion: ((_ response: T) -> Void)?) {
         let urlString = endpoint.baseURL.appendingPathComponent(endpoint.path).absoluteString.removingPercentEncoding
-//        https://api.pagesjaunes.fr/v1/pros/search?what=medecin&where=paris
         
-//        let urlString = "https://api.pagesjaunes.fr/v1/pros/search?what=medecin&where=paris"
         guard let urlRequest = URL(string: urlString ?? "") else { return }
         
         let configuration = URLSessionConfiguration.default

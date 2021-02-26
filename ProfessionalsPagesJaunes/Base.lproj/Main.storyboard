@@ -157,7 +157,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LWB-JJ-IWL" secondAttribute="bottom" id="eM3-ro-3NK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="u1Z-Tl-Bw9"/>
+                    <navigationItem key="navigationItem" title="Home" id="u1Z-Tl-Bw9">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="V5u-te-TBg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rt7-KA-tN2">
+                                <rect key="frame" x="372" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="FrV-ae-mb3" kind="show" id="Be0-13-ffZ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="scrollView" destination="jwe-my-JTe" id="YbQ-0h-Zhw"/>
                         <outlet property="whatTextField" destination="afe-X4-j4R" id="Mbb-Md-SuW"/>
@@ -168,6 +180,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="kBE-gK-GvC">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="FrV-ae-mb3" customClass="FavoritesViewController" customModule="ProfessionalsPagesJaunes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aHl-Tm-q1F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KmK-Gp-PAg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Rw-ea-MV3"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Rw-ea-MV3" firstAttribute="bottom" secondItem="KmK-Gp-PAg" secondAttribute="bottom" id="7n3-Xa-dU5"/>
+                            <constraint firstItem="KmK-Gp-PAg" firstAttribute="leading" secondItem="5Rw-ea-MV3" secondAttribute="leading" id="FHb-fc-5XH"/>
+                            <constraint firstItem="5Rw-ea-MV3" firstAttribute="trailing" secondItem="KmK-Gp-PAg" secondAttribute="trailing" id="a04-ax-eN9"/>
+                            <constraint firstItem="KmK-Gp-PAg" firstAttribute="top" secondItem="5Rw-ea-MV3" secondAttribute="top" id="d2w-Ea-EtY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" id="Qw2-Wr-vfu"/>
+                    <connections>
+                        <outlet property="tableView" destination="KmK-Gp-PAg" id="ZhM-2a-Ykw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOQ-oF-MW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="-559"/>
         </scene>
         <!--Search List-->
         <scene sceneID="p5z-iu-5LX">
@@ -191,7 +234,19 @@
                             <constraint firstItem="drF-Ja-oFP" firstAttribute="leading" secondItem="ekM-Jx-lOe" secondAttribute="leading" id="x9U-V8-YLv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search List" id="1Vn-fh-tGp"/>
+                    <navigationItem key="navigationItem" title="Search List" id="1Vn-fh-tGp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Voc-Yz-Qgc">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3n2-OY-ZTf">
+                                <rect key="frame" x="372" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="FrV-ae-mb3" kind="show" id="NC9-tD-zGb"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="drF-Ja-oFP" id="xka-hk-VPX"/>
                         <segue destination="zFr-0T-D3R" kind="show" identifier="show_details_segue" id="24R-Ue-bAC"/>
@@ -295,7 +350,19 @@
                             <constraint firstItem="4ab-eg-pZ6" firstAttribute="centerY" secondItem="SNn-45-dcW" secondAttribute="centerY" id="fh5-yq-umN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Details" id="rzC-YN-n4l"/>
+                    <navigationItem key="navigationItem" title="Details" id="rzC-YN-n4l">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="qzB-Rg-AR3">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MlK-pb-Tqb">
+                                <rect key="frame" x="372" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="FrV-ae-mb3" kind="show" id="e8m-CR-o6M"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addToFavoritesButton" destination="QvJ-Lx-Xo8" id="I43-hi-g1L"/>
                         <outlet property="addressLabel" destination="Bu9-Wd-Q0z" id="w71-hp-opS"/>
@@ -308,8 +375,12 @@
             <point key="canvasLocation" x="1844.9275362318842" y="93.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Be0-13-ffZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="phone" width="360" height="363"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -318,6 +389,9 @@
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
