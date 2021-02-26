@@ -14,8 +14,7 @@ class ProfessionalsTableViewModel {
     private var profossionals : Professionals?
     
     public func getAccessToken(completion: (() -> Void)?) {
-        networking.getAccessToken(endpoint: AppAPI.accessToken, type: Token.self) { [weak self] (response) in
-            print(response)
+        networking.getAccessToken(endpoint: AppAPI.accessToken, type: Token.self) { (response) in
             completion?()
         }
     }
@@ -36,6 +35,11 @@ class ProfessionalsTableViewModel {
         guard let profossionals = profossionals else { return nil }
         let professionalTableViewCellModel = ProfessionalViewCellModel(professional: profossionals.listings[index])
         return professionalTableViewCellModel
+    }
+    
+    public func selectedProfessional(index: Int) -> Professional? {
+        guard let professional = profossionals?.listings[index] else {return nil}
+        return professional
     }
     
     public var count: Int {

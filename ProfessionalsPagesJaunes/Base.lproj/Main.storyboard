@@ -172,7 +172,7 @@
         <!--Search List-->
         <scene sceneID="p5z-iu-5LX">
             <objects>
-                <viewController id="KVT-mP-lA7" customClass="ProfessionalsViewController" customModule="ProfessionalsPagesJaunes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfessionalsViewController" id="KVT-mP-lA7" customClass="ProfessionalsViewController" customModule="ProfessionalsPagesJaunes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hh4-Sc-Vgf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,16 +194,127 @@
                     <navigationItem key="navigationItem" title="Search List" id="1Vn-fh-tGp"/>
                     <connections>
                         <outlet property="tableView" destination="drF-Ja-oFP" id="xka-hk-VPX"/>
+                        <segue destination="zFr-0T-D3R" kind="show" identifier="show_details_segue" id="24R-Ue-bAC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2g-vu-hN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="975" y="94"/>
         </scene>
+        <!--Details-->
+        <scene sceneID="R7Y-Bt-xeI">
+            <objects>
+                <viewController id="zFr-0T-D3R" customClass="ProfessionalDetailsViewController" customModule="ProfessionalsPagesJaunes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SNn-45-dcW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ab-eg-pZ6">
+                                <rect key="frame" x="35" y="247" width="344" height="402"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpo-VY-R4j">
+                                        <rect key="frame" x="27" y="60" width="243" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ex0-VS-c6K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-Wd-Q0z">
+                                        <rect key="frame" x="16" y="126" width="312" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="46s-7N-zoR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPe-pQ-dCQ">
+                                        <rect key="frame" x="280" y="68" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="Kb4-KT-RCn"/>
+                                            <constraint firstAttribute="height" constant="35" id="cq9-VE-0aC"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" image="phone">
+                                            <color key="titleShadowColor" systemColor="systemGreenColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="callProfessional:" destination="zFr-0T-D3R" eventType="touchUpInside" id="9cj-gk-TyY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvJ-Lx-Xo8">
+                                        <rect key="frame" x="72" y="240" width="200" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Okg-eh-fuy"/>
+                                            <constraint firstAttribute="width" constant="200" id="z7Q-MO-DLY"/>
+                                        </constraints>
+                                        <state key="normal" title="Add to Favorites ">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addProfessionalToFavorites:" destination="zFr-0T-D3R" eventType="touchUpInside" id="eoC-qX-cQi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="344" id="Cq6-qU-vEy"/>
+                                    <constraint firstAttribute="height" constant="402" id="Ha5-Ap-gSZ"/>
+                                    <constraint firstItem="QvJ-Lx-Xo8" firstAttribute="centerX" secondItem="4ab-eg-pZ6" secondAttribute="centerX" id="J86-GI-Zac"/>
+                                    <constraint firstAttribute="trailing" secondItem="dPe-pQ-dCQ" secondAttribute="trailing" constant="29" id="K9h-ON-3oB"/>
+                                    <constraint firstItem="QvJ-Lx-Xo8" firstAttribute="top" secondItem="Bu9-Wd-Q0z" secondAttribute="bottom" constant="64" id="Nqx-Bc-tAH"/>
+                                    <constraint firstItem="Dpo-VY-R4j" firstAttribute="leading" secondItem="4ab-eg-pZ6" secondAttribute="leading" constant="27" id="OH4-Wa-U28"/>
+                                    <constraint firstItem="dPe-pQ-dCQ" firstAttribute="top" secondItem="4ab-eg-pZ6" secondAttribute="top" constant="68" id="QvJ-A2-2FX"/>
+                                    <constraint firstItem="Bu9-Wd-Q0z" firstAttribute="top" secondItem="Dpo-VY-R4j" secondAttribute="bottom" constant="16" id="TYc-h0-ifs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bu9-Wd-Q0z" secondAttribute="trailing" constant="16" id="d88-ke-8UM"/>
+                                    <constraint firstItem="Bu9-Wd-Q0z" firstAttribute="leading" secondItem="4ab-eg-pZ6" secondAttribute="leading" constant="16" id="tkh-l0-TWD"/>
+                                    <constraint firstItem="Dpo-VY-R4j" firstAttribute="top" secondItem="4ab-eg-pZ6" secondAttribute="top" constant="60" id="vGk-t6-nd4"/>
+                                    <constraint firstItem="dPe-pQ-dCQ" firstAttribute="leading" secondItem="Dpo-VY-R4j" secondAttribute="trailing" constant="10" id="zfM-u0-oBZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o0k-lN-0Gy"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4ab-eg-pZ6" firstAttribute="centerX" secondItem="SNn-45-dcW" secondAttribute="centerX" id="Ynq-9S-UBB"/>
+                            <constraint firstItem="4ab-eg-pZ6" firstAttribute="centerY" secondItem="SNn-45-dcW" secondAttribute="centerY" id="fh5-yq-umN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="rzC-YN-n4l"/>
+                    <connections>
+                        <outlet property="addToFavoritesButton" destination="QvJ-Lx-Xo8" id="I43-hi-g1L"/>
+                        <outlet property="addressLabel" destination="Bu9-Wd-Q0z" id="w71-hp-opS"/>
+                        <outlet property="callButton" destination="dPe-pQ-dCQ" id="gsh-ev-Y5v"/>
+                        <outlet property="nameLabel" destination="Dpo-VY-R4j" id="6hF-DZ-qH7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lcp-qq-1oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844.9275362318842" y="93.75"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="phone" width="360" height="363"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

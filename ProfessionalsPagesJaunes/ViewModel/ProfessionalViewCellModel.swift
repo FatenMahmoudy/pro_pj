@@ -8,6 +8,7 @@
 import Foundation
 
 class ProfessionalViewCellModel {
+    
     private let professional: Professional
     
     init(professional: Professional) {

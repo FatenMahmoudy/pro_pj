@@ -16,6 +16,7 @@ class ProfessionalsViewController: UIViewController, UITableViewDelegate, UITabl
     var myActivityIndicator: UIActivityIndicatorView!
     var whatOption: String?
     var whereOption: String?
+    var selectedProfessional: Professional?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,6 @@ class ProfessionalsViewController: UIViewController, UITableViewDelegate, UITabl
         myActivityIndicator.startAnimating()
         
         self.view.addSubview(myActivityIndicator)
-        
-        print("what and where values \(whatOption) \(whereOption)")
         
         viewModel.getProfessionals(whatValue: self.whatOption ?? "", whereValue: self.whereOption ?? "") { [weak self] in
             DispatchQueue.main.async {
@@ -65,15 +64,19 @@ class ProfessionalsViewController: UIViewController, UITableViewDelegate, UITabl
         return 153.0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedProfessional = viewModel.selectedProfessional(index: indexPath.row)
+        performSegue(withIdentifier: "show_details_segue", sender: self)
     }
-    */
+
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destionationViewController = segue.destination as? ProfessionalDetailsViewController {
+            destionationViewController.professional = selectedProfessional
+        }
+    }
 
 }
