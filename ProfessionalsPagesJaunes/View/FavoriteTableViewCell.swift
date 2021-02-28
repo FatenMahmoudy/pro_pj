@@ -11,6 +11,7 @@ class FavoriteTableViewCell: UITableViewCell {
     
     weak var delegate: FavoriteTableViewCellDelegate?
     
+    @IBOutlet weak var removeButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,6 +22,8 @@ class FavoriteTableViewCell: UITableViewCell {
             nameLabel.text = viewModel.name
             addressLabel.text = viewModel.address
             
+            removeButton.addTarget(self, action: #selector(removeFromFavorites(_:)), for: .touchUpInside)
+            
             logoImageView.layer.borderWidth = 1.0
             logoImageView.layer.masksToBounds = false
             logoImageView.layer.cornerRadius = logoImageView.frame.size.height/2
@@ -29,17 +32,16 @@ class FavoriteTableViewCell: UITableViewCell {
     }
     
     @IBAction func removeFromFavorites(_ sender: Any) {
-        
         guard let viewModel = viewModel else {
             return
         }
         if let delegate = delegate {
-            delegate.removeProfessional(self, bookButtonTappedFor: viewModel.professional)
+            delegate.removeProfessional(self, favoriteButtonTappedFor: viewModel.professional)
             viewModel.removeProfessionalFromFavorites()
         }
     }
 }
 
 protocol FavoriteTableViewCellDelegate: AnyObject {
-  func removeProfessional(_ favoriteTableViewCell: FavoriteTableViewCell, bookButtonTappedFor professional: Professional)
+  func removeProfessional(_ favoriteTableViewCell: FavoriteTableViewCell, favoriteButtonTappedFor professional: Professional)
 }

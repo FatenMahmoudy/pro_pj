@@ -12,8 +12,6 @@ class UITestCase: XCTestCase {
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
-        
-        // If the test is StartupConfigurable test, then call configureStartup()
         (self as? StartupConfigurable)?.configureStartup()
     }
 

@@ -55,7 +55,7 @@
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" image="trash" catalog="system"/>
                                 <connections>
-                                    <action selector="removeFromFavorites:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Vef-HS-Xcf"/>
+                                    <action selector="removeFromFavorites:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Lyx-BW-N9z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,6 +87,7 @@
                 <outlet property="addressLabel" destination="nje-dD-ADW" id="b6n-5D-fys"/>
                 <outlet property="logoImageView" destination="msJ-Up-S7p" id="oxM-so-tws"/>
                 <outlet property="nameLabel" destination="Nb1-QU-ZzL" id="wjT-zc-9ZT"/>
+                <outlet property="removeButton" destination="Mz0-0h-V86" id="qts-Ck-M31"/>
             </connections>
             <point key="canvasLocation" x="223.91304347826087" y="129.24107142857142"/>
         </tableViewCell>

@@ -22,6 +22,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         getFavorites()
         
+        navigationController?.navigationBar.accessibilityIdentifier = "favoritesNavigationBar"
         tableView.register(UINib.init(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "FavoriteTableViewCell")
         tableView.separatorStyle = .none
         
@@ -52,6 +53,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cellViewModel = viewModel.cellViewModel(index: indexPath.row)
         cell.viewModel = cellViewModel
+        cell.delegate = self
         return cell
     }
     
@@ -59,11 +61,11 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         return 153.0
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        selectedProfessional = viewModel.selectedProfessional(index: indexPath.row)
-//        performSegue(withIdentifier: "show_details_segue", sender: self)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+////        selectedProfessional = viewModel.selectedProfessional(index: indexPath.row)
+////        performSegue(withIdentifier: "show_details_from_segue_segue", sender: self)
+//    }
 
     
 //    // MARK: - Navigation
@@ -78,7 +80,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
 
 extension FavoritesViewController : FavoriteTableViewCellDelegate {
     
-    func removeProfessional(_ favoriteTableViewCell: FavoriteTableViewCell, bookButtonTappedFor professional: Professional) {
+    func removeProfessional(_ favoriteTableViewCell: FavoriteTableViewCell, favoriteButtonTappedFor professional: Professional) {
         let alert = UIAlertController(title: "Deleted", message: "You have deleted the professional from favorites successfully", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)

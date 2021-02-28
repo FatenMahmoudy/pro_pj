@@ -22,6 +22,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UIScrollViewDel
         hideKeyboardWhenTappedAround()
         
         navigationController?.navigationBar.accessibilityIdentifier = "homeNavigationBar"
+        navigationItem.rightBarButtonItem?.accessibilityIdentifier = "favoritesButton"
         scrollView.accessibilityIdentifier = "homeScrollView"
         whatTextField.accessibilityIdentifier = "whatTextField"
         whereTextField.accessibilityIdentifier = "whereTextField"

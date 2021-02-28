@@ -14,6 +14,7 @@ protocol HomeScreenVerifying {
     var whereTextField: XCUIElement { get }
     var homeNavigationBar: XCUIElement { get }
     var searchButton: XCUIElement { get }
+    var favoritesButton: XCUIElement { get }
 }
 
 extension HomeScreenVerifying {
@@ -39,6 +40,10 @@ extension HomeScreenVerifying {
 
     var searchButton: XCUIElement {
         return XCUIApplication().buttons["searchButton"]
+    }
+    
+    var favoritesButton: XCUIElement {
+        return XCUIApplication().navigationBars.buttons["favoritesButton"]
     }
 }
 

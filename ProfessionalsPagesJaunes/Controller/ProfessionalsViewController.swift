@@ -38,6 +38,7 @@ class ProfessionalsViewController: UIViewController, UITableViewDelegate, UITabl
 
         tableView.register(UINib.init(nibName: "ProfessionalTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfessionalTableViewCell")
         tableView.separatorStyle = .none
+        tableView.accessibilityIdentifier = "searchTableView"
         
         tableView.delegate = self
         tableView.dataSource = self

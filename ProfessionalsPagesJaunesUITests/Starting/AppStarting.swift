@@ -14,6 +14,5 @@ protocol AppStarting {
 extension AppStarting {
     func startApp() {
         XCUIApplication().launch()
-        sleep(10)
     }
 }

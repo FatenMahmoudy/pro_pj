@@ -7,11 +7,10 @@
 
 import XCTest
 
-class HomeViewControllerUITest: UITestCase, AppStarting, HomeScreenVerifying {
+class HomeViewControllerUITest: UITestCase, RootViewStarting, HomeScreenVerifying, FavoritesScreenVerifying {
     
     
-    func testTableInteraction() {
-        startApp()
+    func testViewInteraction() {
         XCTAssertTrue(homeScreenIsShowing())
         XCTAssertTrue(homeNavigationBar.exists)
         XCTAssertTrue(whatTextField.exists)
@@ -19,6 +18,11 @@ class HomeViewControllerUITest: UITestCase, AppStarting, HomeScreenVerifying {
         XCTAssertTrue(searchButton.exists)
         
         searchButton.tap()
+    }
+    
+    func testNavigateToFavorites() {
+        favoritesButton.tap()
+        XCTAssertTrue(favoritesScreenIsShowing())
     }
 }
 

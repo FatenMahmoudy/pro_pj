@@ -32,6 +32,11 @@ class ProfessionalDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameLabel.accessibilityIdentifier = "nameLabel"
+        addressLabel.accessibilityIdentifier = "addressLabel"
+        callButton.accessibilityIdentifier = "callButton"
+        addToFavoritesButton.accessibilityIdentifier = "addToFavoritesButton"
+        
         if let professional = professional {
             viewModel = ProfessionalDetailsViewModel(professional: professional)
         }
