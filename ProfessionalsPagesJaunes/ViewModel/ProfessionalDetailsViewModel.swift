@@ -52,4 +52,17 @@ class ProfessionalDetailsViewModel {
             professionalCache.setObject(storedProfessionals as AnyObject, forKey: "favorites")
         }
     }
+    
+    public func checkIfFavorite() {
+        if let professionals = professionalCache.object(forKey: "favorites") as? [Professional] {
+            
+            if professionals.enumerated().first(where: {$0.element.listing_id == professional.listing_id}) != nil {
+                isFavorite = true
+            } else {
+                isFavorite = false
+            }
+        } else {
+            isFavorite = false
+        }
+    }
 }

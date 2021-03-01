@@ -39,6 +39,18 @@ class ProfessionalDetailsViewController: UIViewController {
         
         if let professional = professional {
             viewModel = ProfessionalDetailsViewModel(professional: professional)
+            if let vm = viewModel {
+                vm.checkIfFavorite()
+                if vm.isFavorite {
+                    addToFavoritesButton.backgroundColor = .red
+                    addToFavoritesButton.setTitle("Remove from favorites", for: .normal)
+                }
+                else {
+                    addToFavoritesButton.backgroundColor = .yellow
+                    addToFavoritesButton.setTitle("Add to favorites", for: .normal)
+                }
+            }
+            
         }
     }
     

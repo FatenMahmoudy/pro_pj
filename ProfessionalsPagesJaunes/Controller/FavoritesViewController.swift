@@ -61,20 +61,19 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         return 153.0
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-////        selectedProfessional = viewModel.selectedProfessional(index: indexPath.row)
-////        performSegue(withIdentifier: "show_details_from_segue_segue", sender: self)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedProfessional = viewModel.selectedProfessional(index: indexPath.row)
+        performSegue(withIdentifier: "show_favorite_details", sender: self)
+    }
 
     
-//    // MARK: - Navigation
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destionationViewController = segue.destination as? ProfessionalDetailsViewController {
-//            destionationViewController.professional = selectedProfessional
-//        }
-//    }
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destionationViewController = segue.destination as? ProfessionalDetailsViewController {
+            destionationViewController.professional = selectedProfessional
+        }
+    }
 
 }
 

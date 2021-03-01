@@ -26,10 +26,10 @@ class FavoritesViewModel {
         return professionalTableViewCellModel
     }
     
-//    public func selectedProfessional(index: Int) -> Professional? {
-//        guard let professional = profossionals?[index] else {return nil}
-//        return professional
-//    }
+    public func selectedProfessional(index: Int) -> Professional? {
+        guard let professional = profossionals?[index] else {return nil}
+        return professional
+    }
     
     public var count: Int {
         return profossionals?.count ?? 0
