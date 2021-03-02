@@ -28,13 +28,18 @@ class ProfessionalsViewController: UIViewController, UITableViewDelegate, UITabl
         
         self.view.addSubview(myActivityIndicator)
         
-        viewModel.getProfessionals(whatValue: self.whatOption ?? "", whereValue: self.whereOption ?? "") { [weak self] in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-                self?.myActivityIndicator.isHidden = true
-                self?.myActivityIndicator.stopAnimating()
+        viewModel.getToken() { [weak self] (response) in
+            
+            self?.viewModel.getProfessionals(accessToken: response ?? "", whatValue: self?.whatOption ?? "", whereValue: self?.whereOption ?? "") { [weak self] in
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                    self?.myActivityIndicator.isHidden = true
+                    self?.myActivityIndicator.stopAnimating()
+                }
             }
         }
+        
+        
 
         tableView.register(UINib.init(nibName: "ProfessionalTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfessionalTableViewCell")
         tableView.separatorStyle = .none

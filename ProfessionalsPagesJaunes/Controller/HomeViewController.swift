@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var whatTextField: UITextField!
     @IBOutlet weak var whereTextField: UITextField!
